@@ -1,4 +1,7 @@
 import json
+import colorama
+from colorama import Fore, init
+colorama.init()
 def Disk(operation: str, disk: dict, args: dict):
     if operation == "FFIND":
         fn = args["file"]

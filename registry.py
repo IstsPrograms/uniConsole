@@ -5,7 +5,7 @@ from colorama import Fore, init
 colorama.init()
 def run():
     dsk = json.load(open("disk.pufs", "r"))
-    print(f"{Fore.BLUE} commands: \n config create (config name) (value) - create config \n config save - save configuration \n config delete (config name) - delete configuration \n config reset - resets config{Fore.RESET}")
+    print(f"{Fore.BLUE} commands: \n config create (config name) (value) - create config \n config save - save configuration \n config delete (config name) - delete configuration {Fore.RESET}")
     while True:
        
         _in = input(">>> ")
@@ -24,10 +24,8 @@ def run():
                     if dsk["reg"][i]["0"] == _in[2]:
                         dsk["reg"].remove(dsk["reg"][i])
                         print(f"Succesfully removed configuration {_in[2]}")
-            elif _in[1] == "reset":
-                dsk["reg"] = []
-                print("Registry reset succefully!")
                     
+
 
     
 
